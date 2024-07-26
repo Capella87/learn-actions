@@ -66,7 +66,7 @@ jobs:
     environment: Playground
     needs: preview
     outputs:
-      appServiceAppHostName: ${{ steps.preview.outputs.appServiceAppHostName }}
+      appServiceAppHostName: ${{ steps.deploy.outputs.appServiceAppHostName }}
     steps:
     - uses: actions/checkout@v3
     - uses: azure/login@v1
@@ -84,6 +84,7 @@ jobs:
         resourceGroupName: ${{ env.AZURE_RESOURCEGROUP_NAME }}
         template: ./deploy/test-bicep-code.bicep
         parameters: environmentType=${{ env.ENVIRONMENT_TYPE }}
+
   smoke-test:
     runs-on: ubuntu-latest
     needs: deploy
