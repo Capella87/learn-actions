@@ -1,7 +1,14 @@
 name: deploy-toy-website
+concurrency: toy-company
 
 on:
+  push:
+    branches:
+      - master
+    paths:
+      - 'deploy/**'
   workflow_dispatch:
+
 permissions:
   id-token: write
   contents: read

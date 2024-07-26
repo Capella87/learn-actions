@@ -21,7 +21,7 @@ var environmentConfigurationMap = {
   nonprod: {
     appServicePlan: {
       sku: {
-        name: 'S1'
+        name: 'F1'
         capacity: 1
       }
     }
@@ -61,6 +61,7 @@ resource appServiceApp 'Microsoft.Web/sites@2022-03-01' = {
     serverFarmId: appServicePlan.id
     httpsOnly: true
     siteConfig: {
+      alwaysOn: true
       appSettings: [
         {
           name: 'ToyManualsStorageAccountConnectionString'
