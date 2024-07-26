@@ -1,0 +1,10 @@
+name: deploy-test-website
+
+on: [workflow_dispatch]
+
+jobs:
+  say-hello-github-actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'placeholder step'
+        run: echo 'Hello, GitHub Actions!'
