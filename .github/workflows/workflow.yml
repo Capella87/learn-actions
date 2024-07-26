@@ -3,10 +3,10 @@ concurrency: toy-company
 
 on:
   push:
-    branches:
-      - master
-    paths:
-      - 'deploy/**'
+    # branches:
+    #   - master
+    # paths:
+    #   - 'deploy/**'
   workflow_dispatch:
 
 permissions:
