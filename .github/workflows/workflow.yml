@@ -1,7 +1,7 @@
 name: deploy-toy-website
 
-on: [workflow_dispatch]
-
+on:
+  workflow_dispatch:
 permissions:
   id-token: write
   contents: read
