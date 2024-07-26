@@ -8,3 +8,6 @@ insert_final_newline = true
 [*.{yml,yaml}]
 end_of_line = lf
 indent_size = 2
+
+[*.{json,bicep}]
+indent_size = 2
